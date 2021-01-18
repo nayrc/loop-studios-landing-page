@@ -1,0 +1,204 @@
+#header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../images/desktop/image-hero.jpg) center no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  //   overflow: hidden;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+    .menu {
+      .link {
+        color: #fff;
+        margin-left: 2rem;
+        text-transform: capitalize;
+        &:hover {
+          color: $veryDarkGray;
+        }
+      }
+    }
+  }
+
+  .main-header {
+    .title {
+      width: 40rem;
+      font-weight: 300;
+      font-size: 5rem;
+      color: #fff;
+      font-family: $josefin;
+      text-transform: uppercase;
+      margin-top: 5rem;
+      padding: 2rem;
+      border: 1px solid $white;
+    }
+  }
+}
+
+#about {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  margin-top: 8rem;
+  z-index: -1;
+  .img-large {
+    position: relative;
+    width: 70rem;
+    height: 40rem;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .text {
+    position: absolute;
+    width: 50rem;
+    background: $white;
+    padding: 5rem;
+    bottom: 0;
+    right: 0;
+    h1 {
+      font-family: $josefin;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p {
+      color: $darkGray;
+      margin-top: 2rem;
+    }
+  }
+}
+
+#creation {
+  position: relative;
+  width: 100%;
+  margin: 8rem 0;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    h1 {
+      font-family: $josefin;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    a {
+      text-transform: uppercase;
+      color: $black;
+      letter-spacing: 1rem;
+      border: 1px solid $black;
+      padding: 0.5rem 1.5rem;
+      transition: 0.15s ease-in-out;
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .card {
+      position: relative;
+      margin: 1rem 0.5rem;
+      a {
+        img {
+          filter: brightness(50%);
+        }
+        span {
+          position: absolute;
+          text-transform: uppercase;
+          color: $white;
+          bottom: 10%;
+          left: 15%;
+          width: 15rem;
+          font-size: 3rem;
+          font-family: $josefin;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background: $black;
+  position: relative;
+  padding: 3rem 0;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    // padding: 3rem 0;
+    .socmed {
+      a {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  .bottom {
+    color: $white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    a {
+      color: $white;
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  #header {
+    // .navbar {
+    //   .menu {
+    //     display: none;
+    //   }
+    // }
+    .main-header {
+      .title {
+        margin-top: 15rem;
+      }
+    }
+  }
+  #about {
+    display: flex;
+    text-align: center;
+    .img-large {
+      position: relative;
+      width: 35rem;
+      height: 30rem;
+      margin-left: 2rem;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .text {
+      position: relative;
+      width: 100%;
+    }
+  }
+  .list {
+    justify-content: center;
+  }
+  #footer {
+    .top {
+      flex-direction: column;
+      text-align: center;
+      .socmed {
+        margin: 5rem 0;
+      }
+    }
+  }
+}
